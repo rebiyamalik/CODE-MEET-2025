@@ -3,161 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AGI & AI Seminar – CASPAM</title>
+<title>CODE MEET 2025 - Event Details</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #f2f4f8;
-  color: #222;
+:root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --accent1: #5a67d8;
+    --accent2: #3182ce;
+    --muted: #718096;
+    --text: #2d3748;
+    --border: #e2e8f0;
+    --radius: 12px;
+    --gap: 16px;
+    --pad: 18px;
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
 }
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: #0d1b38;
-  color: white;
-}
-header h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-header p {
-  font-size: 18px;
-  margin-top: 8px;
-  font-weight: 500;
-}
-
-/* Appreciation Section */
-.appreciation {
-  text-align: center;
-  padding: 45px 20px;
-  background: white;
-}
-.appreciation h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-.appreciation p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-}
-.appreciation .speakers {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 35px;
-}
-.appreciation .speakers img {
-  width: 240px;
-  height: 260px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 4px solid #0d1b38;
-}
-
-/* Event Description */
-.description {
-  padding: 45px 30px;
-  background: #fff;
-  text-align: center;
-}
-.description p {
-  font-size: 19px;
-  max-width: 850px;
-  margin: 0 auto;
-  line-height: 1.7;
-  font-weight: 500;
-}
-
-/* Time & Venue Section – Highlight style */
-.timevenue {
-  padding: 35px 20px;
-  text-align: center;
-  background: #132955;
-  color: white;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-/* Contact Section */
-.contacts {
-  padding: 40px 20px;
-  text-align: center;
-  background: #fff;
-}
-.contacts h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-.contacts p {
-  font-size: 19px;
-  margin: 6px 0;
-  font-weight: 500;
-}
-
-/* Poster */
-.poster {
-  text-align: center;
-  padding: 50px 10px;
-}
-.poster img {
-  width: 90%;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
+.container{max-width:1200px;margin:0 auto;padding:20px;}
+.event-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
+.event-header img{height:80px;object-fit:contain;}
+.event-title{text-align:center;font-family:'Poppins',sans-serif;flex:1;margin:0 20px;}
+.event-title h1{margin:0;font-size:28px;font-weight:700;color:var(--text);}
+.event-title h2{margin:4px 0 0;font-size:18px;font-weight:600;color:var(--muted);}
+.event-title h3{margin:4px 0 0;font-size:16px;font-weight:500;color:var(--accent1);}
+.highlight{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:12px;border-radius:8px;text-align:center;margin:15px 0;font-weight:600;}
+.app{display:grid;grid-template-columns:280px 1fr;gap:24px;}
+.sidebar{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);height:fit-content;position:sticky;top:20px;}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Poppins';font-size:18px;}
+.brand h1{font-size:18px;margin:0;color:var(--text);}
+.brand p{margin:0;font-size:13px;color:var(--muted);}
+.nav{margin-top:18px;}
+.nav a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:500;margin-bottom:6px;transition:all 0.2s ease;}
+.nav a.active,.nav a:hover{background:linear-gradient(90deg,rgba(90,103,216,0.08),rgba(49,130,206,0.04));color:var(--accent1);}
+.small{font-size:14px;color:var(--muted);}
+.main{padding:0;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;}
+.title{font-family:'Poppins';font-size:24px;color:var(--text);font-weight:600;}
+.controls{display:flex;gap:10px;align-items:center;}
+.btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;transition:all 0.2s ease;}
+.btn:hover{opacity:0.9;transform:translateY(-1px);}
+.btn.ghost{background:transparent;color:var(--accent1);border:1px solid rgba(90,103,216,0.2);}
+.btn.ghost:hover{background:rgba(90,103,216,0.05);}
+.content{display:grid;grid-template-columns:1fr;gap:20px;}
+.card{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
+h2{margin:0 0 12px 0;font-family:'Poppins';color:var(--text);font-weight:600;font-size:20px;}
+p, li{color:var(--text);margin-bottom:12px;}
+ul{padding-left:20px;}
+.note-box{border-left:4px solid var(--accent1);padding:16px;border-radius:8px;background:rgba(90,103,216,0.03);margin:16px 0;}
+.speakers-section{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+.speakers-section img{width:200px;height:240px;border-radius:12px;object-fit:cover;border:4px solid var(--accent1);}
+.appreciation-text{text-align:center;max-width:800px;margin:0 auto;font-size:16px;line-height:1.6;margin-bottom:30px;}
+@media(max-width:1024px){.content{grid-template-columns:1fr;}.side-right{position:static;margin-top:0;}}
+@media(max-width:768px){.app{grid-template-columns:1fr;}.event-header{flex-direction:column;text-align:center;gap:15px;}.event-header img{height:60px;}.event-title h1{font-size:24px;}.event-title h2{font-size:16px;}.event-title h3{font-size:14px;}.topbar{flex-direction:column;align-items:flex-start;gap:12px;}.sidebar{position:static;}}
 </style>
 </head>
 <body>
+<div class="container">
+    <header class="event-header">
+        <img src="https://i.postimg.cc/L5KbVVcd/bzu-logo-removebg-preview-(1).png" alt="BZU Logo">
+        <div class="event-title">
+            <h1>CODE MEET 2025 (Agentic AI)</h1>
+            <h3>Center for Advanced Studies in Pure and Applied Mathematics (CASPAM)</h3>
+            <h3>This event is led by Rebiya Ismail</h3>
+        </div>
+        <img src="https://i.postimg.cc/3xSfqhsB/CASPAM-logo-removebg-preview.png" alt="CASPAM Logo">
+    </header>
 
-<header>
-  <h1>AGI & AI SEMINAR — CASPAM</h1>
-  <p>This event is led by <strong>Rebiya Ismail</strong></p>
-</header>
+    <!-- Venue & Date Highlight -->
+    <div class="highlight">
+        Venue: CASPAM, LAB BZU Multan | Date & Time: 04 Dec, 2025 (Thursday) | 11:00 AM - 01:00 PM
+    </div>
 
-<section class="appreciation">
-  <h2>Special Appreciation</h2>
-  <div class="speakers">
-    <img src="https://i.postimg.cc/Zqbn0g4W/dr-athar-kharal.jpg" alt="Dr. Athar Kharal">
-    <img src="https://i.postimg.cc/G9nhRgXC/dr-imran-javaid.jpg" alt="Dr. Imran Javaid">
-  </div>
-  <p>
-    We express our heartfelt gratitude to <strong>Dr. Athar Kharal</strong> and <strong>Dr. Imran Javaid</strong> from the
-    <strong>Center for Advanced Studies in Pure and Applied Mathematics (CASPAM)</strong>
-    for their remarkable guidance, mentorship, and continuous support. Their dedication to empowering young minds and advancing
-    the future of Artificial General Intelligence and Artificial Intelligence is truly inspirational.
-    This seminar is a proud moment for us, and we deeply appreciate their valuable contributions that made this event possible.
-  </p>
-</section>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">GN</div>
+                <div>
+                    <h1>Event Pages</h1>
+                    <p class="small">Quick Navigation</p>
+                </div>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="danish.html">Danish</a>
+                <a href="Rebiya.html">Rebiya</a>
+                <a href="Zainab.html">Zainab</a>
+                <a href="q&A.html">Q & A</a>
+            </nav>
+        </aside>
 
-<section class="description">
-  <p>
-    Be part of the most insightful and impactful seminar on <strong>Artificial General Intelligence & Artificial Intelligence</strong>.
-    This is going to be the <strong>best AI learning event of the year</strong> with real-world insights and academic excellence.
-  </p>
-</section>
+        <main class="main">
+            <div class="topbar">
+                <div class="title">Event Details & Registration</div>
+                <div class="controls">
+                    <button class="btn" id="downloadPDF">Download Event PDF</button>
+                </div>
+            </div>
 
-<section class="timevenue">
-  📍 Venue: CASPAM — BZU Multan  
-  🗓 Date & Time: Thursday, 4 December 2025 — 11:00 AM
-</section>
+            <div class="content" id="eventContent">
+                <!-- Appreciation Section -->
+                <section class="card">
+                    <h2>Special Appreciation</h2>
+                    <div class="speakers-section">
+                        <img src="https://i.postimg.cc/G9nhRgXC/dr-imran-javaid.jpg" alt="Dr. Imran Javaid">
+                        <img src="https://i.postimg.cc/Zqbn0g4W/dr-athar-kharal.jpg" alt="Dr. Athar Kharal">
+                    </div>
+                    <p class="appreciation-text">
+                        We express our heartfelt gratitude to <strong>Dr. Imran Javaid</strong> and <strong>Dr. Athar Kharal</strong> from
+                        the <strong>Center for Advanced Studies in Pure and Applied Mathematics (CASPAM)</strong> for their guidance and support.
+                        Their dedication to empowering students and advancing AI knowledge is truly inspirational.
+                    </p>
+                </section>
 
-<section class="contacts">
-  <h3>Contact Information</h3>
-  <p>📞 0312-0452699</p>
-  <p>📞 0306-37272327</p>
-  <p>📧 rebiyaismail86@gmail.com</p>
-</section>
+                <!-- Event Description -->
+                <section class="card">
+                    <h2>Event Description</h2>
+                    <p>This is a student-focused workshop on Git, GitHub, and VS Code with practical hands-on sessions. The event emphasizes learning modern coding workflows, collaboration techniques, and real-world project management using Agentic AI principles.</p>
 
-<section class="poster">
-  <img src="https://i.postimg.cc/W3PVYY1p/page-2.png" alt="Event Poster">
-</section>
+                    <h2>Instructions for Attendees</h2>
+                    <ul>
+                        <li>Arrive on time; sessions start promptly at 11:00 AM.</li>
+                        <li>Bring your laptop with Git and VS Code installed.</li>
+                        <li>Maintain discipline and follow the session rules.</li>
+                        <li>Follow COVID-19 precautions and maintain hygiene.</li>
+                        <li>Active participation is encouraged; questions and interactions are welcome.</li>
+                    </ul>
 
+                    <h2>Registration Process</h2>
+                    <p>Pay the registration fee via Easypaisa or bank account (details available on the event poster). After payment, confirm registration by sending your payment screenshot to the contacts below.</p>
+
+                    <h2>Contacts</h2>
+                    <ul>
+                        <li>Rebiya Ismail: 0312-0452699 | Email: rebiyaismail86@gmail.com</li>
+                        <li>Muqtasid Khan: 0306-37272327</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- HTML2PDF JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById('downloadPDF').addEventListener('click', () => {
+    const element = document.getElementById('eventContent');
+    html2pdf().set({
+        margin: 0.5,
+        filename: 'CODE_MEET_2025_Event.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }).from(element).save();
+});
+</script>
 </body>
 </html>
