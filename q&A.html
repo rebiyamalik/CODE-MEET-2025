@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Meet 2025 Q&A</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --accent1: #5a67d8;
+    --accent2: #3182ce;
+    --muted: #718096;
+    --text: #2d3748;
+    --border: #e2e8f0;
+    --radius: 12px;
+    --gap: 16px;
+    --pad: 18px;
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
+.container{max-width:1200px;margin:0 auto;padding:20px;}
+.event-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
+.event-header img{height:80px;object-fit:contain;}
+.event-title{text-align:center;font-family:'Poppins',sans-serif;}
+.event-title h1{margin:0;font-size:28px;font-weight:700;color:var(--text);}
+.event-title h2{margin:4px 0 0;font-size:18px;font-weight:600;color:var(--muted);}
+.speaker-photo-container{display:flex;justify-content:center;margin:20px 0 30px;}
+.speaker-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;box-shadow:var(--shadow);border:4px solid white;}
+.app{display:grid;grid-template-columns:280px 1fr;gap:24px;}
+.sidebar{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);height:fit-content;position:sticky;top:20px;}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Poppins';font-size:18px;}
+.brand h1{font-size:18px;margin:0;color:var(--text);}
+.brand p{margin:0;font-size:13px;color:var(--muted);}
+.nav{margin-top:18px;}
+.nav a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:500;margin-bottom:6px;transition:all 0.2s ease;}
+.nav a.active,.nav a:hover{background:linear-gradient(90deg,rgba(90,103,216,0.08),rgba(49,130,206,0.04));color:var(--accent1);}
+.small{font-size:14px;color:var(--muted);}
+.main{padding:0;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;}
+.title{font-family:'Poppins';font-size:24px;color:var(--text);font-weight:600;}
+.controls{display:flex;gap:10px;align-items:center;}
+.btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;transition:all 0.2s ease;}
+.btn:hover{opacity:0.9;transform:translateY(-1px);}
+.btn.ghost{background:transparent;color:var(--accent1);border:1px solid rgba(90,103,216,0.2);}
+.btn.ghost:hover{background:rgba(90,103,216,0.05);}
+.content{display:grid;grid-template-columns:1fr;gap:20px;}
+.card{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
+h2{margin:0 0 12px 0;font-family:'Poppins';color:var(--text);font-weight:600;font-size:20px;}
+h3{margin:0 0 8px 0;font-family:'Poppins';color:var(--text);font-weight:500;}
+p{color:var(--text);margin-bottom:12px;}
+ul{padding-left:20px;}
+ol{padding-left:20px;}
+.note-box{border-left:4px solid var(--accent1);padding:16px;border-radius:8px;background:rgba(90,103,216,0.03);margin:16px 0;}
+pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-family:'Consolas','Monaco',monospace;white-space:pre-wrap;line-height:1.5;overflow-x:auto;}
+.speaker-bio{display:flex;gap:20px;align-items:center;margin-top:30px;padding:20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);}
+.speaker-bio-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid rgba(90,103,216,0.1);box-shadow:var(--shadow);}
+.speaker-bio-content{flex:1;}
+.speaker-bio h2{margin:0 0 6px 0;font-family:'Poppins';font-size:22px;}
+.speaker-bio-subtitle{margin:0 0 12px 0;color:var(--muted);font-size:15px;}
+.social-links{display:flex;gap:12px;margin-top:12px;align-items:center;}
+.social-links a{text-decoration:none;font-weight:500;padding:6px 12px;border-radius:6px;font-size:14px;transition:all 0.2s ease;}
+.social-links a[title="GitHub"]{background:rgba(90,103,216,0.1);color:var(--accent1);}
+.social-links a[title="LinkedIn"]{background:rgba(10,102,194,0.1);color:#0a66c2;}
+.social-links a:hover{opacity:0.8;transform:translateY(-1px);}
+@media(max-width:1024px){.content{grid-template-columns:1fr;}.side-right{position:static;margin-top:0;}}
+@media(max-width:768px){.app{grid-template-columns:1fr;}.event-header{flex-direction:column;text-align:center;gap:15px;}.event-header img{height:60px;}.event-title h1{font-size:24px;}.event-title h2{font-size:16px;}.topbar{flex-direction:column;align-items:flex-start;gap:12px;}.speaker-bio{flex-direction:column;text-align:center;}.sidebar{position:static;}}
+</style>
+</head>
+<body>
+<div class="container">
+    <header class="event-header">
+        <img src="https://i.postimg.cc/L5KbVVcd/bzu-logo-removebg-preview-(1).png" alt="BZU Logo">
+        <div class="event-title">
+            <h1>CODE MEET 2025(Agentic AI)</h1>
+            <h2>Speaker: Rebiya Ismail</h2>
+        </div>
+        <img src="https://i.postimg.cc/3xSfqhsB/CASPAM-logo-removebg-preview.png" alt="CASPAM Logo">
+    </header>
+
+    <div class="speaker-photo-container">
+        <img src="https://i.postimg.cc/zf5GLQwR/rebiya-pic.jpg" alt="Speaker Photo" class="speaker-photo">
+    </div>
+
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">GN</div>
+                <div>
+                    <h1>Speaker Notes</h1>
+                    <p class="small">Git • GitHub • VS Code</p>
+                </div>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#qanda" class="active" data-target="qanda">Q & A</a>
+                <a href="#helpdesk" data-target="helpdesk">Help Desk</a>
+                <a href="#reviews" data-target="reviews">Reviews</a>
+                <a href="#about" data-target="about">About</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <div class="topbar">
+                <div>
+                    <div class="title">Q & A Section</div>
+                    <div class="small">Git • GitHub • VS Code • GitHub Copilot</div>
+                </div>
+                <div class="controls">
+                    <button class="btn" id="downloadPDF">Download Notes (PDF)</button>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- Q&A Section -->
+                <section id="qanda" class="card">
+                    <h2>Q & A</h2>
+                    <ol>
+                        <li><strong>What is Git?</strong>
+                            <p>Git is a version control system that tracks changes in files and code.</p>
+                        </li>
+                        <li><strong>What is GitHub?</strong>
+                            <p>GitHub is a cloud platform that hosts Git repositories and facilitates collaboration.</p>
+                        </li>
+                        <li><strong>What is VS Code?</strong>
+                            <p>Visual Studio Code is a lightweight code editor with features like debugging, extensions, and Git integration.</p>
+                        </li>
+                        <li><strong>What is GitHub Copilot?</strong>
+                            <p>GitHub Copilot is an AI-powered code assistant integrated with VS Code.</p>
+                        </li>
+                        <li><strong>How do I clone a repository?</strong>
+                            <p>Use <code>git clone repository-url</code> to copy a repository to your local machine.</p>
+                        </li>
+                        <li><strong>How to initialize a Git repository?</strong>
+                            <p>Use <code>git init</code> inside your project folder.</p>
+                        </li>
+                        <li><strong>How to create a new branch?</strong>
+                            <p>Use <code>git branch branch-name</code> to create a new branch.</p>
+                        </li>
+                        <li><strong>How to switch branches?</strong>
+                            <p>Use <code>git checkout branch-name</code> to switch to another branch.</p>
+                        </li>
+                        <li><strong>How to stage and commit changes?</strong>
+                            <p>Use <code>git add .</code> to stage and <code>git commit -m "message"</code> to commit.</p>
+                        </li>
+                        <li><strong>How to push changes to GitHub?</strong>
+                            <p>Use <code>git push origin branch-name</code> to push local commits to GitHub.</p>
+                        </li>
+                        <li><strong>How to view commit history?</strong>
+                            <p>Use <code>git log</code> to see the history of commits.</p>
+                        </li>
+                        <li><strong>How to resolve merge conflicts?</strong>
+                            <p>Edit conflicting files, stage them, and commit to resolve conflicts.</p>
+                        </li>
+                        <li><strong>How to configure Git username and email?</strong>
+                            <p>Use <code>git config --global user.name "Your Name"</code> and <code>git config --global user.email "you@example.com"</code>.</p>
+                        </li>
+                        <li><strong>How does GitHub Copilot help?</strong>
+                            <p>It suggests code completions and generates snippets based on context.</p>
+                        </li>
+                        <li><strong>Can I work offline with Git?</strong>
+                            <p>Yes, commits can be made locally and pushed when connected to the internet.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- Help Desk -->
+                <section id="helpdesk" class="card">
+                    <h2>Help Desk</h2>
+                    <p>If you need help, contact: <a href="mailto:rebiyaismail86@gmail.com">rebiyaismail86@gmail.com</a></p>
+                </section>
+
+                <!-- Reviews -->
+                <section id="reviews" class="card">
+                    <h2>Reviews</h2>
+                    <p>"Clear notes on Git and VS Code. Very helpful!" – Student A</p>
+                    <p>"Rebiya explains technical topics simply." – Student B</p>
+                    <p>"The Q&A section is perfect for beginners." – Student C</p>
+                </section>
+
+                <!-- Speaker Bio -->
+                <section class="speaker-bio">
+                    <img src="https://i.postimg.cc/zf5GLQwR/rebiya-pic.jpg" alt="Rebiya Ismail" class="speaker-bio-img">
+                    <div class="speaker-bio-content">
+                        <h2>Rebiya Ismail</h2>
+                        <p class="speaker-bio-subtitle">Website Developer • Agentic AI Developer • Graphic Designer • Marketing Manager</p>
+                        <p>Rebiya Ismail is a mathematics graduate specialized in building innovative Agentic AI solutions and web applications. She combines strong technical development skills with graphic design and marketing experience, and advocates technology awareness among youth helping learners bridge theory and real-world product development.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+                            <a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById('downloadPDF').addEventListener('click', () => {
+    const element = document.querySelector('.content');
+    html2pdf().set({
+        margin: 0.5,
+        filename: 'CodeMeet-QA.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }).from(element).save();
+});
+</script>
+</body>
+</html>
