@@ -28,7 +28,7 @@ Registration Information
 * **Fee:** PKR 200 (non-refundable)
 * **Payment Options:**
 
-  * **Easypaisa:** 0320-0195649 (Muqtasid Khan)
+  * **JAZZCASH:** 0320-0195649 (Muqtasid Khan)
   * **Bank Transfer (UBL):** PK16UNIL0109000328520974 (Account Holder: Rebiya Ismail)
 
 **Note:** After payment, participants must send the payment confirmation (screenshot) to the contacts below and complete the registration form to secure their spot. Registration closes on **7th December 2025**.
