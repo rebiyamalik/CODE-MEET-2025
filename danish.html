@@ -40,6 +40,49 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflo
 .download-btn{position:absolute;top:18px;right:18px;background:var(--accent1);color:white;padding:6px 12px;font-size:12px;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:0.2s;}
 .download-btn:hover{background:var(--accent2);}
 .section-header{position:relative;padding-top:30px;}
+
+/* -------------------- MOBILE RESPONSIVE -------------------- */
+/* Keep layout identical on desktop; stack on smaller screens */
+@media (max-width: 900px) {
+    .app {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav a {
+        display: inline-block;
+        margin: 0 8px;
+        padding: 10px 14px;
+    }
+    .speaker-card { padding:16px; }
+}
+
+/* More compact on small phones */
+@media (max-width: 600px) {
+    .event-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .event-header img { height:60px; }
+    .event-title h1 { font-size:22px; }
+    .event-title h2 { font-size:15px; }
+    .speaker-card { flex-direction:column; text-align:center; gap:12px; }
+    .speaker-card img { width:100px; height:100px; }
+    .download-btn { top:10px; right:10px; padding:6px 10px; font-size:12px; }
+    pre.code { font-size:13px; }
+}
+
+/* ensure long pre blocks wrap nicely on very narrow screens */
+pre.code { white-space: pre-wrap; word-wrap: break-word; }
 </style>
 </head>
 <body>
@@ -177,6 +220,13 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflo
     <p>“Agentic AI is shaping the future of programming. Thank you!”</p>
 
 </div>
+ <div class="utility-block social">
+        <p>CONNECT_PROFILE</p>
+        <a href="https://www.linkedin.com/in/muhammad-danish-0b3727376">LinkedIn</a>
+        <a href="https://github.com/danishcorder">GitHub</a>
+        <a href="https://www.facebook.com/profile.php?id=61551805148698">Facebook</a>
+      </div>
+    </div>
 
 </main>
 </div>
@@ -219,7 +269,37 @@ Workflow:
 5. Use for refactoring, testing, documentation
 6. Cline understands full project context
 
-... (rest of notes content can be included here)
+Cline Interface:
+- CLINE Tab
+- Recent Tasks
+- Auto-Approve Mode
+- Read/Edit Permissions
+- Safe Commands, Browser Tools, MCP
+- Task Input Box
+- Model Indicator
+
+ACT / PLAN Modes:
+- Plan Mode: Cline explains steps first.
+- Act Mode: Automatically performs actions.
+
+API Models & Providers:
+- OpenAI
+- Hugging Face
+- OpenRouter
+- Cohere
+- Replicate
+- DeepAI
+
+Prompts:
+"Build a responsive website explaining core mathematical concepts and their IT applications."
+
+Test Generation:
+"Generate unit tests for this Python project using pytest."
+
+Summary:
+Cline makes coding intelligent, efficient, and interactive through agent-based workflows.
+
+(You can add more notes here if needed)
 `;
 
 downloadBtn.addEventListener("click", ()=>{
