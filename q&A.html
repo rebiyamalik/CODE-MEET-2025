@@ -22,39 +22,18 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
 .container{max-width:1200px;margin:0 auto;padding:60px 20px 20px 20px;}
-.event-header{position:relative;text-align:center;padding:40px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
+.event-header{position:relative;text-align:center;padding:40px 0;margin-bottom:20px;border-bottom:1px solid var(--border);display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px;}
 .event-header img{height:80px;object-fit:contain;}
-#bzuLogo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 80px;
-    object-fit: contain;
-}
-#caspamLogo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 80px;
-    object-fit: contain;
-}
-.event-title{text-align:center;font-family:'Poppins',sans-serif;}
+#bzuLogo {position: absolute; top:20px; left:20px; height:80px; object-fit:contain;}
+#caspamLogo {position: absolute; top:20px; right:20px; height:80px; object-fit:contain;}
+.event-title{text-align:center;font-family:'Poppins',sans-serif;flex:1;max-width:600px;}
 .event-title h1{margin:0;font-size:28px;font-weight:700;color:var(--text);}
 .event-title h2{margin:4px 0 0;font-size:18px;font-weight:600;color:var(--muted);}
-.app{display:grid;grid-template-columns:280px 1fr;gap:24px;}
-.sidebar{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);height:fit-content;position:sticky;top:20px;}
-.brand{display:flex;gap:12px;align-items:center;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border);}
-.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:'Poppins';font-size:18px;}
-.brand h1{font-size:18px;margin:0;color:var(--text);}
-.brand p{margin:0;font-size:13px;color:var(--muted);}
-.nav{margin-top:18px;}
-.nav a{display:block;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:500;margin-bottom:6px;transition:all 0.2s ease;}
-.nav a.active,.nav a:hover{background:linear-gradient(90deg,rgba(90,103,216,0.08),rgba(49,130,206,0.04));color:var(--accent1);}
-.small{font-size:14px;color:var(--muted);}
+.app{display:grid;grid-template-columns:1fr;gap:24px;}
 .main{padding:0;}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;}
-.title{font-family:'Poppins';font-size:24px;color:var(--text);font-weight:600;}
-.controls{display:flex;gap:10px;align-items:center;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;flex-wrap:wrap;}
+.title{font-family:'Poppins';font-size:24px;color:var(--text);font-weight:600;margin-bottom:8px;}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
 .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;transition:all 0.2s ease;}
 .btn:hover{opacity:0.9;transform:translateY(-1px);}
 .btn.ghost{background:transparent;color:var(--accent1);border:1px solid rgba(90,103,216,0.2);}
@@ -64,8 +43,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);backgroun
 h2{margin:0 0 12px 0;font-family:'Poppins';color:var(--text);font-weight:600;font-size:20px;}
 h3{margin:0 0 8px 0;font-family:'Poppins';color:var(--text);font-weight:500;}
 p{color:var(--text);margin-bottom:12px;}
-ul{padding-left:20px;}
-ol{padding-left:20px;}
+ul,ol{padding-left:20px;}
 .note-box{border-left:4px solid var(--accent1);padding:16px;border-radius:8px;background:rgba(90,103,216,0.03);margin:16px 0;}
 pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-family:'Consolas','Monaco',monospace;white-space:pre-wrap;line-height:1.5;overflow-x:auto;}
 .speaker-bio{display:flex;gap:20px;align-items:center;margin-top:30px;padding:20px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);}
@@ -80,9 +58,18 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-fa
 .social-links a:hover{opacity:0.8;transform:translateY(-1px);}
 .review-section{margin-top:20px;}
 .review-section textarea{width:100%;min-height:80px;padding:12px;border-radius:8px;border:1px solid var(--border);margin-bottom:10px;font-family:'Inter';font-size:14px;}
-.review-section button{display:block;}
-@media(max-width:1024px){.content{grid-template-columns:1fr;}.side-right{position:static;margin-top:0;}}
-@media(max-width:768px){.app{grid-template-columns:1fr;}.event-header{flex-direction:column;text-align:center;gap:15px;}.event-header img{height:60px;}.event-title h1{font-size:24px;}.event-title h2{font-size:16px;}.topbar{flex-direction:column;align-items:flex-start;gap:12px;}.speaker-bio{flex-direction:column;text-align:center;}.sidebar{position:static;}}
+.review-section button{display:block;width:100%;max-width:200px;}
+@media(max-width:1024px){
+    .content{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+    .event-header{flex-direction:column;align-items:center;text-align:center;gap:20px;padding:20px 0;}
+    #bzuLogo,#caspamLogo{position:static;margin:0 auto;}
+    .event-title h1{font-size:22px;}
+    .event-title h2{font-size:16px;}
+    .topbar{flex-direction:column;align-items:flex-start;gap:10px;}
+    .review-section button{width:100%;}
+}
 </style>
 </head>
 <body>
