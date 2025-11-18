@@ -21,10 +21,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
-.container{max-width:1200px;margin:0 auto;padding:20px;}
-.event-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
+.container{max-width:1200px;margin:0 auto;padding:60px 20px 20px 20px;}
+.event-header{position:relative;text-align:center;padding:40px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
 .event-header img{height:80px;object-fit:contain;}
-.event-title{text-align:center;flex:1;font-family:'Poppins',sans-serif;}
+.event-title{text-align:center;font-family:'Poppins',sans-serif;}
 .event-title h1{margin:0;font-size:28px;font-weight:700;color:var(--text);}
 .event-title h2{margin:4px 0 0;font-size:18px;font-weight:600;color:var(--muted);}
 .app{display:grid;grid-template-columns:280px 1fr;gap:24px;}
@@ -74,12 +74,12 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-fa
 <body>
 <div class="container">
     <header class="event-header">
-        <img src="https://i.postimg.cc/L5KbVVcd/bzu-logo-removebg-preview-(1).png" alt="BZU Logo" style="order:1;">
-        <div class="event-title" style="order:2;">
+        <img src="https://i.postimg.cc/L5KbVVcd/bzu-logo-removebg-preview-(1).png" alt="BZU Logo" style="position:absolute; top:20px; left:20px; height:80px; object-fit:contain;">
+        <div class="event-title">
             <h1>CODE MEET 2025(Agentic AI)</h1>
             <h2>Queries & HelpDesk</h2>
         </div>
-        <img src="https://i.postimg.cc/3xSfqhsB/CASPAM-logo-removebg-preview.png" alt="CASPAM Logo">
+        <img src="https://i.postimg.cc/3xSfqhsB/CASPAM-logo-removebg-preview.png" alt="CASPAM Logo" style="position:absolute; top:20px; right:20px; height:80px; object-fit:contain;">
     </header>
 
     <main class="main">
