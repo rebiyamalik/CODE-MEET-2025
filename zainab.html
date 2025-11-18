@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,128 +111,83 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-fa
 
             <div class="content">
                 <section id="notes" class="card">
-                    <h2>Overview</h2>
-                    <p class="note-box">This page contains easy-to-read speaker notes for Git, GitHub and VS Code. Each section is written in plain language with practical commands and step-by-step actions.</p>
 
-                    <h2>GitHUb Copilot</h2>
-                    <h3>Definition</h3>
-                    <p>A version control system that tracks changes in code/files locally.</p>
-                    <h3>Key Points</h3>
+                    <h2>1. Introduction to Agentic AI</h2>
+                    <p>Agentic AI represents a new generation of AI systems capable of autonomous reasoning, planning, and tool usage. Unlike traditional chatbots, agentic AI systems can break down complex tasks into steps and execute them with minimal human input. Examples include GitHub Copilot Agent and Blackbox AI Agent.</p>
+
+                    <h2>2. Tools You Will Use</h2>
                     <ul>
-                        <li>Keeps history of every change</li>
-                        <li>Allows reverting to previous versions</li>
-                        <li>Supports multiple people working on the same project</li>
-                        <li>Works locally without internet</li>
-                    </ul>
-                    <h3>Analogy</h3>
-                    <p>Git is like a notebook that tracks every edit you make to a story.</p>
-
-                    <h2>GitHub</h2>
-                    <h3>Definition</h3>
-                    <p>A cloud platform to store Git repositories online and collaborate with others.</p>
-                    <h3>Key Points</h3>
-                    <ul>
-                        <li>Share code with others</li>
-                        <li>Teams can collaborate remotely</li>
-                        <li>Provides issue tracking, reviews, project management</li>
-                        <li>Backup your code online</li>
-                    </ul>
-                    <h3>Analogy</h3>
-                    <p>GitHub is like a library where you store your notebook online so others can read or contribute.</p>
-
-                    <h2 class="mt-14">Installations (Windows)</h2>
-                    <div class="note-box">
-                        <p><strong>Install Git:</strong> Download from <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer">git-scm.com</a>. After install, open Git Bash and run <code>git --version</code>.</p>
-                        <p><strong>Install VS Code:</strong> Download from <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">code.visualstudio.com</a>. Recommended extensions: GitLens, Prettier, GitHub Pull Requests.</p>
-                    </div>
-
-                    <h2 class="mt-14">Initial Setup (config)</h2>
-                    <pre class="code">git config --global user.name "Your Name"
-git config --global user.email "you@example.com"</pre>
-
-                    <h2 class="mt-14">Create SSH Key (quick)</h2>
-                    <pre class="code">ssh-keygen -t ed25519 -C "you@example.com"
-# then
-cat ~/.ssh/id_ed25519.pub</pre>
-
-                    <h2 class="mt-14">Create, Init, Push (step-by-step)</h2>
-                    <pre class="code">mkdir myproject
-cd myproject
-code .
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@github.com:username/myproject.git
-git branch -M main
-git push -u origin main</pre>
-
-                    <h2 class="mt-14">Daily Workflow</h2>
-                    <pre class="code">git add .
-git commit -m "describe your change"
-git push</pre>
-
-                    <h2 class="mt-14">Branching & Merging</h2>
-                    <pre class="code">git checkout -b feature-xyz
-# make changes
-git add .
-git commit -m "feat: add xyz"
-git checkout main
-git merge feature-xyz
-git push
-git branch -d feature-xyz</pre>
-
-                    <h2 class="mt-14">Delete SSH Key (GitHub)</h2>
-                    <p>Go to GitHub → Settings → SSH & GPG keys → Remove your key. To delete locally, remove the files from <code>C:\Users\YourName\.ssh\</code>.</p>
-               <h2 class="mt-14">VS Code</h2>
-                    <h2>Definition</h2>
-                    <p>Visual Studio Code is a free, lightweight code editor with powerful features for coding, debugging, and version control integration.</p>
-
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li>Syntax highlighting and IntelliSense</li>
-                        <li>Integrated terminal</li>
-                        <li>Debugging support</li>
-                        <li>Extensions for Git, GitHub, and AI-powered tools like GitHub Copilot</li>
-                        <li>Customizable themes and keyboard shortcuts</li>
+                        <li>VS Code Insiders (required for Copilot Agents)</li>
+                        <li>Git (version control)</li>
+                        <li>Python (virtual environment + coding demo)</li>
+                        <li>Node.js (optional for some agent extensions)</li>
+                        <li>GitHub Copilot Agent</li>
+                        <li>Blackbox AI Agent (browser-based)</li>
                     </ul>
 
-                    <h2>Useful Extensions</h2>
-                    <ul>
-                        <li>GitLens – enhances Git capabilities inside VS Code</li>
-                        <li>Prettier – code formatter for consistent style</li>
-                        <li>GitHub Pull Requests – manage PRs directly from VS Code</li>
-                        <li>GitHub Copilot – AI-powered coding suggestions</li>
-                    </ul>
+                    <h2>3. Installing Requirements</h2>
+                    <ol>
+                        <li>Install VS Code Insiders from Microsoft official website.</li>
+                        <li>Install Git.</li>
+                        <li>Install Python 3.10+.</li>
+                        <li>Install Node.js if needed.</li>
+                        <li>Enable GitHub Copilot extension + GitHub Copilot Agent.</li>
+                    </ol>
 
-                    <h2>Daily Workflow</h2>
+                    <h2>4. Creating a Project in VS Code Insiders</h2>
+                    <p>Steps:</p>
+                    <ol>
+                        <li>Open VS Code Insiders</li>
+                        <li>Click File → New Folder</li>
+                        <li>Name it e.g., <b>agentic-ai-demo</b></li>
+                        <li>Click Open Folder</li>
+                        <li>Right-click → New File → create <b>main.py</b>, etc.</li>
+                    </ol>
+
+                    <h2>5. Creating a Virtual Environment</h2>
                     <pre class="code">
-# Open your project
-code .
-
-# Open terminal inside VS Code
-# Stage your changes
-git add .
-
-# Commit your changes
-git commit -m "Describe your changes"
-
-# Push changes to GitHub
-git push
+python -m venv venv
+venv\Scripts\activate  (Windows)
+source venv/bin/activate  (Mac/Linux)
                     </pre>
 
-                    <h2>Tips</h2>
+                    <h2>6. Installing basic libraries (Dependencies)</h2>
+                    <pre class="code">
+pip install requests openai fastapi uvicorn
+                    </pre>
+
+                    <h2>7. Using GitHub Copilot Agent</h2>
+                    <p>Open Copilot Chat → Ask to generate project structure.</p>
+                    <pre class="code">
+"Create a FastAPI API with a /predict endpoint."
+                    </pre>
+
+                    <h2>8. Initializing Git & Creating GitHub Repository</h2>
+                    <pre class="code">
+git init
+# Ask Copilot Agent: "Create a Python .gitignore file."
+# Then push through VS Code or via Copilot Agent.
+                    </pre>
+
+                    <h2>9. Introducing Blackbox AI Agent</h2>
+                    <p>Open <b>blackbox.ai</b> → Paste code → Ask for optimization, debugging, and explanations.</p>
+
+                    <h2>10. Final Workflow Summary</h2>
                     <ul>
-                        <li>Use the integrated terminal instead of switching to Git Bash</li>
-                        <li>Use shortcuts like Ctrl+` for terminal, Ctrl+Shift+P for commands</li>
-                        <li>Customize your editor with extensions for your workflow</li>
+                        <li>Explain Agentic AI</li>
+                        <li>Install tools</li>
+                        <li>Create project</li>
+                        <li>Make virtual environment</li>
+                        <li>Use agents for coding + structure</li>
+                        <li>Create repo</li>
+                        <li>Demo automation</li>
                     </ul>
 
                     <section class="speaker-bio">
                         <img src="https://i.postimg.cc/0yJL99z5/IMG-20251118-112007-059-2.jpg" alt="Rebiya Ismail" class="speaker-bio-img">
                         <div class="speaker-bio-content">
-                            <h2>Rebiya Ismail</h2>
-                            <p class="speaker-bio-subtitle">Website Developer • Agentic AI Developer • Graphic Designer • Marketing Manager</p>
-                            <p>Rebiya Ismail is a mathematics graduate specialized in building innovative Agentic AI solutions and web applications. She combines strong technical development skills with graphic design and marketing experience, and advocates technology awareness among youth helping learners bridge theory and real-world product development.</p>
+                            <h2>Zainab Akram Rao</h2>
+                            <p class="speaker-bio-subtitle">Website Developer • Agentic AI Developer </p>Math graduate transitioning into the world of AI. My work focuses on connecting mathematical problem-solving with practical AI tool like GitUb Copilot Agents,automation workflows and python development. </p>
                             <div class="social-links">
                                 <a href="https://github.com/zainabakramrao18" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
                                 <a href="https://www.linkedin.com/in/zainab-akram-a64136304" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
@@ -253,13 +207,12 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
     const element = document.getElementById('notes');
     html2pdf().set({
         margin: 0.5,
-        filename: 'Git-GitHub-VSCode-Notes.pdf',
+        filename: 'Agentic_AI_Notes.pdf',
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
     }).from(element).save();
 });
 </script>
+
 </body>
 </html>
-
-
