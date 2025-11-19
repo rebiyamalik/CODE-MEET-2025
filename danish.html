@@ -33,55 +33,30 @@ html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);backgroun
 .card{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
 h2,h3,h4{font-family:'Poppins';font-weight:700;margin-bottom:10px;}
 h3,h4{margin-top:15px;}
-h2.section-title{color:var(--accent1);} /* Blue title */
-pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;}
+h2.section-title{color:var(--accent1);} 
+pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflow-x:auto;font-size:14px;white-space:pre-wrap;word-wrap:break-word;}
+
+ul { padding-left: 1.5rem; margin-left: 0; list-style-position: outside; }
+ul li { margin-bottom: 8px; }
+ol { padding-left: 1.8rem; margin-left: 0; }
+ol li { margin-bottom: 8px; }
+
 .speaker-card{display:flex;gap:20px;align-items:center;padding:20px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);margin-bottom:20px;}
 .speaker-card img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid rgba(90,103,216,0.25);}
 .download-btn{position:absolute;top:18px;right:18px;background:var(--accent1);color:white;padding:6px 12px;font-size:12px;border-radius:6px;text-decoration:none;font-weight:600;cursor:pointer;transition:0.2s;}
 .download-btn:hover{background:var(--accent2);}
 .section-header{position:relative;padding-top:30px;}
-
-
-.social a {
-   color: var(--color-accent-purple);
-   border: 1px solid var(--color-accent-purple);
- }
-
- .social a:hover {
-   background-color: var(--color-accent-purple);
-   color: #fff;
-   box-shadow: 0 0 20px var(--color-accent-purple);
- }
+.social a { color: var(--accent1); border:1px solid var(--accent1); padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:500; transition:0.2s;}
+.social a:hover { background-color: var(--accent1); color: #fff; box-shadow:0 0 10px var(--accent1); }
 
 @media (max-width: 900px) {
-    .app {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-    .sidebar {
-        position: relative;
-        top: 0;
-        width: 100%;
-        padding: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .nav a {
-        display: inline-block;
-        margin: 0 8px;
-        padding: 10px 14px;
-    }
+    .app { grid-template-columns: 1fr; gap: 18px; }
+    .sidebar { position: relative; top:0; width:100%; padding:12px; display:flex; justify-content:center; align-items:center; }
+    .nav a { display:inline-block; margin:0 8px; padding:10px 14px; }
     .speaker-card { padding:16px; }
 }
-
-/* More compact on small phones */
 @media (max-width: 600px) {
-    .event-header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+    .event-header { flex-direction: column; gap: 10px; text-align:center; }
     .event-header img { height:60px; }
     .event-title h1 { font-size:22px; }
     .event-title h2 { font-size:15px; }
@@ -90,8 +65,6 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;overflo
     .download-btn { top:10px; right:10px; padding:6px 10px; font-size:12px; }
     pre.code { font-size:13px; }
 }
-
-pre.code { white-space: pre-wrap; word-wrap: break-word; }
 </style>
 </head>
 <body>
@@ -99,28 +72,26 @@ pre.code { white-space: pre-wrap; word-wrap: break-word; }
 <div class="container">
 
 <header class="event-header">
-    <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/bzu%20logo.jfif"alt="CASPAM Logo">
+    <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/bzu%20logo.jfif" alt="BZU Logo">
     <div class="event-title">
         <h1>CODE MEET 2025</h1>
         <h2>Speaker: Muhammad Danish</h2>
     </div>
-    <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/CASPAM_logo.jfif"alt="CASPAM Logo">
+    <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/CASPAM_logo.jfif" alt="CASPAM Logo">
 </header>
 
 <div class="app">
 <aside class="sidebar">
     <nav class="nav">
         <a href="#" class="active" data-target="agentic">Agentic AI</a>
-        <a href="#" data-target="about"></a>
     </nav>
 </aside>
 
 <main>
 
-<!-- ---------------- AGENTIC AI ---------------- -->
 <div id="agentic" class="page card section-header">
 
-    <button class="download-btn" id="downloadBtn">Download</button>
+    <button class="download-btn" id="downloadBtn">Download PDF</button>
 
     <div class="speaker-card">
         <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/Danish.jfif" alt="Muhammad Danish">
@@ -134,7 +105,7 @@ pre.code { white-space: pre-wrap; word-wrap: break-word; }
     <p><strong>Topic:</strong> Multi-File AI Collaboration using Cline</p>
 
     <h3>Introduction</h3>
-    <p>Artificial Intelligence has evolved from answering questions to making decisions. This led to <strong>Agentic AI</strong>AI that thinks, plans, and executes tasks autonomously. Tools like <strong>Cline</strong> bring this capability directly into VS Code.</p>
+    <p>Artificial Intelligence has evolved from answering questions to making decisions. This led to <strong>Agentic AI</strong>—AI that thinks, plans, and executes tasks autonomously. Tools like <strong>Cline</strong> bring this capability directly into VS Code.</p>
 
     <h3>Installation & Workflow</h3>
     <h4>Installation</h4>
@@ -187,140 +158,28 @@ pre.code { white-space: pre-wrap; word-wrap: break-word; }
     <h3>Test Generation</h3>
     <pre class="code">"Generate unit tests for this Python project using pytest."</pre>
 
-    <h3>Cline vs Copilot</h3>
-    <ul>
-        <li><strong>Scope:</strong> Cline = multi-file • Copilot = single file</li>
-        <li><strong>Control:</strong> Cline = review changes • Copilot = auto-suggestions</li>
-        <li><strong>Depth:</strong> Cline = project understanding • Copilot = completions</li>
-    </ul>
-
-    <h3>Advantages</h3>
-    <ul>
-        <li>Project-wide reasoning</li>
-        <li>Multi-file editing</li>
-        <li>Approval workflow</li>
-        <li>Model flexibility</li>
-    </ul>
-
-    <h3>Disadvantages</h3>
-    <ul>
-        <li>Needs API + internet</li>
-        <li>Slower on large projects</li>
-        <li>No offline mode</li>
-    </ul>
-
     <h3>Summary</h3>
-    <p>Cline makes coding intelligent, efficient, and interactive through agent-based workflows. It helps developers edit, test, document, and refactor entire projects using AI.</p>
-
-    <h3>About the Speaker</h3>
-    <div class="speaker-card">
-        <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/Danish.jfif" alt="Muhammad Danish">
-        <div>
-            <h3>Muhammad Danish</h3>
-            <p>Developer • Automation Specialist • AI Workflow Designer</p>
-            <p>Passionate about designing intelligent systems that boost productivity, automate development processes, and enhance modern programming workflows.</p>
-        </div>
-    </div>
-    <p>This seminar was conducted to introduce students and professionals to the real-world power of <strong>Agentic AI</strong>, especially inside VS Code using Cline.</p>
-
-    <h3>Closing Line</h3>
-    <p>“Agentic AI is shaping the future of programming. Thank you!”</p>
+    <p>Cline makes coding intelligent, efficient, and interactive through agent-based workflows.</p>
 
 </div>
- <div class="utility-block social">
-        <p>CONNECT_PROFILE</p>
-        <a href="https://www.linkedin.com/in/muhammad-danish-0b3727376">LinkedIn</a>
-        <a href="https://github.com/danishcorder">GitHub</a>
-        <a href="https://www.facebook.com/profile.php?id=61551805148698">Facebook</a>
-      </div>
-    </div>
 
 </main>
 </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-// --------- PAGE SWITCH ----------
-const links=document.querySelectorAll(".nav a");
-const pages=document.querySelectorAll(".page");
-links.forEach(link=>{
-    link.addEventListener("click",()=>{
-        links.forEach(l=>l.classList.remove("active"));
-        link.classList.add("active");
-        pages.forEach(p=>p.style.display="none");
-        document.getElementById(link.dataset.target).style.display="block";
-    });
-});
-
-// --------- DOWNLOAD NOTES ----------
 const downloadBtn = document.getElementById("downloadBtn");
-const notesContent = `
-Agentic AI
-Topic: Multi-File AI Collaboration using Cline
-
-Introduction:
-Artificial Intelligence has evolved from answering questions to making decisions. This led to Agentic AI—AI that thinks, plans, and executes tasks autonomously. Tools like Cline bring this capability directly into VS Code.
-
-Installation & Workflow:
-Installation:
-1. Open VS Code
-2. Go to Extensions → search “Cline”
-3. Click Install
-4. Connect to a model (GPT, Claude, etc.)
-
-Workflow:
-1. Open your project in VS Code
-2. Chat with Cline to explore or edit code
-3. Cline edits, creates, or explains multi-file code
-4. Review changes before applying
-5. Use for refactoring, testing, documentation
-6. Cline understands full project context
-
-Cline Interface:
-- CLINE Tab
-- Recent Tasks
-- Auto-Approve Mode
-- Read/Edit Permissions
-- Safe Commands, Browser Tools, MCP
-- Task Input Box
-- Model Indicator
-
-ACT / PLAN Modes:
-- Plan Mode: Cline explains steps first.
-- Act Mode: Automatically performs actions.
-
-API Models & Providers:
-- OpenAI
-- Hugging Face
-- OpenRouter
-- Cohere
-- Replicate
-- DeepAI
-
-Prompts:
-"Build a responsive website explaining core mathematical concepts and their IT applications."
-
-Test Generation:
-"Generate unit tests for this Python project using pytest."
-
-Summary:
-Cline makes coding intelligent, efficient, and interactive through agent-based workflows.
-
-(You can add more notes here if needed)
-`;
-
-downloadBtn.addEventListener("click", ()=>{
-    const blob = new Blob([notesContent], {type: "text/plain"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Agentic_AI_Notes.txt";
-    a.click();
-    URL.revokeObjectURL(url);
+downloadBtn.addEventListener("click", () => {
+    const element = document.getElementById("agentic");
+    html2pdf().set({
+        margin: 0.5,
+        filename: 'Agentic_AI_Notes.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }).from(element).save();
 });
 </script>
 
 </body>
 </html>
-
-
