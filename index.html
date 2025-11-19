@@ -23,9 +23,87 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
 .container{max-width:1200px;margin:0 auto;padding:20px;}
-.event-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;margin-bottom:20px;border-bottom:1px solid var(--border);}
+
+/* Cinematic Header */
+.event-header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+    margin-bottom:20px;
+    border-bottom:1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sliding logos */
+.event-header img:first-child { /* BZU Logo */
+    transform: translateX(-200px);
+    opacity: 0;
+    animation: slideLogoLeft 1.5s ease-out forwards;
+}
+.event-header img:last-child { /* CASPAM Logo */
+    transform: translateX(200px);
+    opacity: 0;
+    animation: slideLogoRight 1.5s ease-out forwards;
+}
+@keyframes slideLogoLeft {
+    0% { transform: translateX(-200px); opacity:0; }
+    100% { transform: translateX(0); opacity:1; }
+}
+@keyframes slideLogoRight {
+    0% { transform: translateX(200px); opacity:0; }
+    100% { transform: translateX(0); opacity:1; }
+}
+
+/* Text Cinematic Glow & Scale */
+.event-title h1,
+.event-title h2,
+.event-title h3 {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.9);
+    background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(90,103,216,0.5), 0 0 40px rgba(49,130,206,0.3);
+    animation: cinematicText 2s ease-out forwards, floatText 6s ease-in-out infinite;
+}
+
+/* Staggered text animation */
+.event-title h2 { animation-delay: 0.5s; }
+.event-title h3 { animation-delay: 1s; }
+
+@keyframes cinematicText {
+    0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+    50% { opacity: 0.8; transform: scale(1.05) translateY(-5px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes floatText {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.01); }
+}
+
+/* Cinematic background overlay */
+.event-header::before {
+    content:'';
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: linear-gradient(120deg, rgba(90,103,216,0.08), rgba(49,130,206,0.08));
+    pointer-events:none;
+    animation: headerLight 8s linear infinite alternate;
+}
+@keyframes headerLight {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Rest of your original styles */
 .event-header img{height:80px;object-fit:contain;}
-.event-title{text-align:center;font-family:'Poppins',sans-serif;flex:1;margin:0 20px;}
+.event-title{text-align:center;font-family:'Poppins',sans-serif;flex:1;margin:0 20px;position:relative;z-index:1;}
 .event-title h1{margin:0;font-size:28px;font-weight:700;color:var(--text);}
 .event-title h2{margin:4px 0 0;font-size:18px;font-weight:600;color:var(--muted);}
 .event-title h3{margin:4px 0 0;font-size:16px;font-weight:500;color:var(--accent1);}
