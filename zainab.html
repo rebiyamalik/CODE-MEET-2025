@@ -64,6 +64,14 @@ pre.code{background:#1a202c;color:#e2e8f0;padding:16px;border-radius:8px;font-fa
 .social-links a[title="GitHub"]{background:rgba(90,103,216,0.1);color:var(--accent1);}
 .social-links a[title="LinkedIn"]{background:rgba(10,102,194,0.1);color:#0a66c2;}
 .social-links a:hover{opacity:0.8;transform:translateY(-1px);}
+
+/* Adjustment for neat readability - same as previous code */
+ul { padding-left: 1.5rem; margin-left: 0; list-style-position: outside; }
+ul li { margin-bottom: 8px; }
+ol { padding-left: 1.8rem; margin-left: 0; }
+ol li { margin-bottom: 8px; }
+
+/* Responsive media queries */
 @media(max-width:1024px){.content{grid-template-columns:1fr;}.side-right{position:static;margin-top:0;}}
 @media(max-width:768px){.app{grid-template-columns:1fr;}.event-header{flex-direction:column;text-align:center;gap:15px;}.event-header img{height:60px;}.event-title h1{font-size:24px;}.event-title h2{font-size:16px;}.topbar{flex-direction:column;align-items:flex-start;gap:12px;}.speaker-bio{flex-direction:column;text-align:center;}.sidebar{position:static;}}
 </style>
@@ -186,7 +194,8 @@ git init
                         <img src="https://raw.githubusercontent.com/rebiyamalik/CODE-MEET-2025/refs/heads/main/Zainab.jfif" alt="Zainab AKram Rao" class="speaker-bio-img">
                         <div class="speaker-bio-content">
                             <h2>Zainab Akram Rao</h2>
-                            <p class="speaker-bio-subtitle">Website Developer • Agentic AI Developer </p>Math graduate transitioning into the world of AI. My work focuses on connecting mathematical problem-solving with practical AI tool like GitUb Copilot Agents,automation workflows and python development. </p>
+                            <p class="speaker-bio-subtitle">Website Developer • Agentic AI Developer </p>
+                            <p>Math graduate transitioning into the world of AI. My work focuses on connecting mathematical problem-solving with practical AI tools like GitHub Copilot Agents, automation workflows and Python development.</p>
                             <div class="social-links">
                                 <a href="https://github.com/zainabakramrao18" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
                                 <a href="https://www.linkedin.com/in/zainab-akram-a64136304" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
@@ -214,5 +223,4 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
 </script>
 
 </body>
-
-</html>    
+</html>
