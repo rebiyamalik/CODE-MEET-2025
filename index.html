@@ -19,6 +19,7 @@
     --pad: 18px;
     --shadow: 0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
 }
+
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);background-color:var(--bg);line-height:1.6;}
 .container{max-width:1200px;margin:0 auto;padding:20px;}
@@ -40,9 +41,9 @@ html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);backgroun
 .nav a.active,.nav a:hover{background:linear-gradient(90deg,rgba(90,103,216,0.08),rgba(49,130,206,0.04));color:var(--accent1);}
 .small{font-size:14px;color:var(--muted);}
 .main{padding:0;}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding:10px 0;flex-wrap:wrap;}
 .title{font-family:'Poppins';font-size:24px;color:var(--text);font-weight:600;}
-.controls{display:flex;gap:10px;align-items:center;}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
 .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;padding:8px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;transition:all 0.2s ease;}
 .btn:hover{opacity:0.9;transform:translateY(-1px);}
 .btn.ghost{background:transparent;color:var(--accent1);border:1px solid rgba(90,103,216,0.2);}
@@ -51,13 +52,12 @@ html,body{height:100%;font-family:'Inter',sans-serif;color:var(--text);backgroun
 .card{background:var(--card);border-radius:var(--radius);padding:var(--pad);box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
 h2{margin:0 0 12px 0;font-family:'Poppins';color:var(--text);font-weight:600;font-size:20px;}
 p, li{color:var(--text);margin-bottom:12px;}
-ul{padding-left:20px;}
+ul{padding-left:1.2em; margin-bottom:16px;}
+li{margin-bottom:8px;}
 .note-box{border-left:4px solid var(--accent1);padding:16px;border-radius:8px;background:rgba(90,103,216,0.03);margin:16px 0;}
-.speakers-section{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
-.speakers-section img{width:200px;height:240px;border-radius:12px;object-fit:cover;border:4px solid var(--accent1);}
+.speakers-section{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+.speakers-section img{width:100%; max-width:200px; height:auto; border-radius:12px; object-fit:cover; border:4px solid var(--accent1);}
 .appreciation-text{text-align:center;max-width:800px;margin:0 auto;font-size:16px;line-height:1.6;margin-bottom:30px;}
-
-/* 🔥 FIXED PAYMENT BOX (no inline styles) */
 .payment-box{
     background:rgba(49,130,206,0.06);
     border-left:6px solid #3182ce;
@@ -67,29 +67,43 @@ ul{padding-left:20px;}
     font-size:16px;
     line-height:1.6;
 }
-.payment-title{
-    color:#2d3748;
-    font-size:17px;
-}
-.iban{
-    font-family:monospace;
-}
+.payment-title{color:#2d3748;font-size:17px;}
+.iban{font-family:monospace;}
 
-@media(max-width:1024px){.content{grid-template-columns:1fr;}.side-right{position:static;margin-top:0;}}
-@media(max-width:768px){.app{grid-template-columns:1fr;}.event-header{flex-direction:column;text-align:center;gap:15px;}.event-header img{height:60px;}.event-title h1{font-size:24px;}.event-title h2{font-size:16px;}.event-title h3{font-size:14px;}.topbar{flex-direction:column;align-items:flex-start;gap:12px;}.sidebar{position:static;}}
-
+/* RESPONSIVE ADJUSTMENTS */
+@media(max-width:1024px){
+    .app{grid-template-columns:1fr;}
+    .sidebar{position:static;margin-bottom:20px;}
+    .speakers-section{gap:16px;}
+}
+@media(max-width:768px){
+    .event-header{flex-direction:column;text-align:center;gap:15px;}
+    .event-header img{height:60px;}
+    .event-title h1{font-size:24px;}
+    .event-title h2{font-size:16px;}
+    .event-title h3{font-size:14px;}
+    .topbar{flex-direction:column;align-items:flex-start;gap:12px;}
+    .controls{width:100%;justify-content:flex-start;}
+    iframe{width:100% !important; min-width:300px;}
+}
+@media(max-width:480px){
+    .event-title h1{font-size:20px;}
+    .event-title h2{font-size:14px;}
+    .event-title h3{font-size:12px;}
+    .btn{width:100%;text-align:center;}
+}
 </style>
 </head>
 <body>
 <div class="container">
     <header class="event-header">
-        <img src="https://i.postimg.cc/L5KbVVcd/bzu-logo-removebg-preview-(1).png" alt="BZU Logo">
+        <img src="https://raw.githubusercontent.com/username/repo/main/bzu-logo.png" alt="BZU Logo">
         <div class="event-title">
             <h1>CODE MEET 2025 (Agentic AI)</h1>
             <h3>Center for Advanced Studies in Pure and Applied Mathematics (CASPAM)</h3>
             <h3>This event is  going to led by Rebiya Ismail</h3>
         </div>
-        <img src="https://i.postimg.cc/3xSfqhsB/CASPAM-logo-removebg-preview.png" alt="CASPAM Logo">
+        <img src="https://raw.githubusercontent.com/username/repo/main/CASPAM-logo.png" alt="CASPAM Logo">
     </header>
 
     <div class="highlight">
@@ -101,13 +115,12 @@ ul{padding-left:20px;}
             <div class="brand">
                 <div class="logo">GN</div>
                 <div>
-                    <h1>Event Pages</h1>
-                    <p class="small">Quick Navigation</p>
+                    <h1>HOME</h1>
                 </div>
             </div>
             <nav class="nav" id="nav">
                 <a href="danish.html">Cline</a>
-                <a href="rebiya.html">Git,GitHub,VS Code</a>
+                <a href="rebiya.html">Git & VS Code</a>
                 <a href="zainab.html">GitHub Copilot</a>
                 <a href="q&A.html">Queries & HelpDesk</a>
             </nav>
@@ -125,38 +138,35 @@ ul{padding-left:20px;}
                 <section class="card">
                     <h2>Special Appreciation</h2>
                     <div class="speakers-section">
-                        <img src="https://i.postimg.cc/G9nhRgXC/dr-imran-javaid.jpg" alt="Dr. Imran Javaid">
-                        <img src="https://i.postimg.cc/Zqbn0g4W/dr-athar-kharal.jpg" alt="Dr. Athar Kharal">
+                        <img src="https://raw.githubusercontent.com/username/repo/main/dr-imran-javaid.jpg" alt="Dr. Imran Javaid">
+                        <img src="https://raw.githubusercontent.com/username/repo/main/dr-athar-kharal.jpg" alt="Dr. Athar Kharal">
                     </div>
                     <p class="appreciation-text">
                         We express our heartfelt gratitude to director of CASPAM <strong>Dr. Imran Javaid</strong> and our organizer <strong>Dr. Athar Kharal</strong> from
                         the <strong>Center for Advanced Studies in Pure and Applied Mathematics (CASPAM)</strong> for their guidance and support.
-                        Their dedication to empowering students and advancing AI knowledge is truly inspirational.And a specail thanks to my team mates M.Danish,Zainab Akranm Rao for their brillince work and dedictaion for this event.
+                        Their dedication to empowering students and advancing AI knowledge is truly inspirational. And a special thanks to my teammates M.Danish, Zainab Akram Rao for their brilliance and dedication for this event.
                     </p>
                 </section>
 
                 <section class="card">
                     <h2>Event Description</h2>
-                    <p>CODE MEET 2025 is a hands on seminar on Agentic AI, led by Rebiya Ismail, designed for students and aspiring developers. Learn Git, GitHub, VS Code, CLI (cline), and GitHub Copilot with practical exercises, collaborative workflows, and real-world project tips.
+                    <p>CODE MEET 2025 is a hands-on seminar on Agentic AI, led by Rebiya Ismail, designed for students and aspiring developers. Learn Git, GitHub, VS Code, CLI (cline), and GitHub Copilot with practical exercises, collaborative workflows, and real-world project tips.</p>
+                    <p>Organized under the guidance of Dr. Imran Javaid and Dr. Athar Kharal at CASPAM, this seminar bridges theory and practice, empowering participants to build AI-driven projects efficiently.</p>
+                    <p>Join us for this exciting and educational event and take your first step toward mastering modern coding tools, AI collaboration, and development workflows.</p>
 
-Organized under the guidance of Dr. Imran Javaid and Dr. Athar Kharal at the Center for Advanced Studies in Pure and Applied Mathematics (CASPAM), this seminar bridges theory and practice, empowering participants to build AI-driven projects efficiently.
-
-Join us for this exciting and educational event and take your first step toward mastering modern coding tools, AI collaboration, and development workflows
                     <h2>Instructions for Attendees</h2>
                     <ul>
                         <li>Arrive on time; sessions start promptly at 11:00 AM.</li>
                         <li>Bring your laptop with Git and VS Code installed.</li>
                         <li>Maintain discipline and follow the session rules.</li>
-                        <li>must confirm your regestration.</li>
-                        <li>Bring your ID-Card,Student Card with yourself.</li>
+                        <li>Must confirm your registration.</li>
+                        <li>Bring your ID-Card, Student Card with yourself.</li>
                         <li>Active participation is encouraged; questions and interactions are welcome.</li>
                     </ul>
 
                     <h2>Registration Process</h2>
                     <ul>
                         <li><strong>Payment Options:</strong> Pay the registration fee 200-/ via Easypaisa or bank account.</li>
-
-                        <!-- FIXED PAYMENT BLOCK -->
                         <li>
                             <div class="payment-box">
                                 <strong class="payment-title">Payment Details</strong><br><br>
@@ -165,10 +175,9 @@ Join us for this exciting and educational event and take your first step toward 
                                 <strong>Account Holder:</strong> Rebiya Ismail
                             </div>
                         </li>
-
                         <li><strong>Confirmation:</strong> After payment, send a screenshot of your payment to the contacts below to confirm your registration.</li>
-                        <li><strong>Regestration Form:</strong> Must fill your regestration form.</li>
-                        <li><strong>Condition:</strong> Regestration fee isn't refendable.</li>
+                        <li><strong>Registration Form:</strong> Must fill your registration form.</li>
+                        <li><strong>Condition:</strong> Registration fee isn't refundable.</li>
                         <li><strong>Attendance:</strong> Without confirmation there will be no entry.</li>
                         <li><strong>Deadline:</strong> Registration will be closed on <strong>07 Dec, 2025</strong>.</li>
                     </ul>
@@ -179,9 +188,8 @@ Join us for this exciting and educational event and take your first step toward 
                         <li>Muqtasid Khan: 0308-7154709 | Email: muqikhan2197@gmail.com</li>
                     </ul>
 
-                    <!-- Google Form embedded outside of ul -->
                     <h2>Registration Form</h2>
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPBqKsrR7t005qcqW5_cwtQSplKoH6DpQmwEsM75bQWPXlTw/viewform?embedded=true" width="640" height="1095" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPBqKsrR7t005qcqW5_cwtQSplKoH6DpQmwEsM75bQWPXlTw/viewform?embedded=true" width="100%" height="1095" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </section>
             </div>
         </main>
@@ -201,4 +209,4 @@ document.getElementById('downloadPDF').addEventListener('click', () => {
 });
 </script>
 </body>
-</html> 
+</html>
